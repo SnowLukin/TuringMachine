@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Algorithm" representedClassName="Algorithm" syncable="YES">
+        <attribute name="activeStateId" optional="YES" attributeType="String"/>
+        <attribute name="algDescription" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastEditDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="startingStateId" optional="YES" attributeType="String"/>
+        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Folder" inverseName="algorithms" inverseEntity="Folder"/>
+        <relationship name="states" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="StateQ" inverseName="algorithm" inverseEntity="StateQ"/>
+        <relationship name="tapes" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Tape" inverseName="algorithm" inverseEntity="Tape"/>
+    </entity>
+    <entity name="Combination" representedClassName="Combination" syncable="YES">
+        <attribute name="directionIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fromChar" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="toChar" optional="YES" attributeType="String" defaultValueString=""/>
+        <relationship name="option" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Option" inverseName="combinations" inverseEntity="Option"/>
+    </entity>
+    <entity name="Folder" representedClassName="Folder" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="algorithms" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Algorithm" inverseName="folder" inverseEntity="Algorithm"/>
+    </entity>
+    <entity name="Option" representedClassName="Option" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="toStateId" optional="YES" attributeType="String"/>
+        <relationship name="combinations" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Combination" inverseName="option" inverseEntity="Combination"/>
+        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StateQ" inverseName="options" inverseEntity="StateQ"/>
+    </entity>
+    <entity name="StateQ" representedClassName="StateQ" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <relationship name="algorithm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="states" inverseEntity="Algorithm"/>
+        <relationship name="options" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Option" inverseName="state" inverseEntity="Option"/>
+    </entity>
+    <entity name="Tape" representedClassName="Tape" syncable="YES">
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="headIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="input" optional="YES" attributeType="String"/>
+        <relationship name="algorithm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="tapes" inverseEntity="Algorithm"/>
+    </entity>
+</model>

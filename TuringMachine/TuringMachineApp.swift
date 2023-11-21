@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct TuringMachineApp: App {
-    let persistenceController = PersistenceController.shared
+    let context = PersistenceController.shared.container.viewContext
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            EmptyView()
         }
+        .environment(\.managedObjectContext, context)
     }
 }

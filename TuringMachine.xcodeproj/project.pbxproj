@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D743CD992AF039D60076CEE9 /* TuringMachineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743CD982AF039D60076CEE9 /* TuringMachineApp.swift */; };
-		D743CD9B2AF039D60076CEE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743CD9A2AF039D60076CEE9 /* ContentView.swift */; };
 		D743CD9D2AF039D90076CEE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D743CD9C2AF039D90076CEE9 /* Assets.xcassets */; };
 		D743CDA02AF039D90076CEE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D743CD9F2AF039D90076CEE9 /* Preview Assets.xcassets */; };
 		D743CDA22AF039D90076CEE9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743CDA12AF039D90076CEE9 /* Persistence.swift */; };
@@ -16,6 +15,38 @@
 		D743CDAF2AF039D90076CEE9 /* TuringMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743CDAE2AF039D90076CEE9 /* TuringMachineTests.swift */; };
 		D743CDB92AF039D90076CEE9 /* TuringMachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743CDB82AF039D90076CEE9 /* TuringMachineUITests.swift */; };
 		D743CDBB2AF039D90076CEE9 /* TuringMachineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743CDBA2AF039D90076CEE9 /* TuringMachineUITestsLaunchTests.swift */; };
+		D79FE3602B0BF591002328B0 /* MockDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE35F2B0BF591002328B0 /* MockDataGenerator.swift */; };
+		D79FE36D2B0BFA3A002328B0 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3612B0BFA3A002328B0 /* Option.swift */; };
+		D79FE36F2B0BFA3A002328B0 /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3632B0BFA3A002328B0 /* Combination.swift */; };
+		D79FE3712B0BFA3A002328B0 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3652B0BFA3A002328B0 /* Algorithm.swift */; };
+		D79FE3732B0BFA3A002328B0 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3672B0BFA3A002328B0 /* Folder.swift */; };
+		D79FE3752B0BFA3A002328B0 /* StateQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3692B0BFA3A002328B0 /* StateQ.swift */; };
+		D79FE3772B0BFA3A002328B0 /* Tape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE36B2B0BFA3A002328B0 /* Tape.swift */; };
+		D79FE37A2B0BFC4B002328B0 /* CoreDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3792B0BFC4B002328B0 /* CoreDataFetcher.swift */; };
+		D79FE37D2B0BFCA7002328B0 /* FolderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE37C2B0BFCA7002328B0 /* FolderListView.swift */; };
+		D79FE37F2B0BFE0E002328B0 /* Optional+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE37E2B0BFE0E002328B0 /* Optional+Date.swift */; };
+		D79FE3812B0BFF01002328B0 /* Optional+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3802B0BFF01002328B0 /* Optional+String.swift */; };
+		D79FE3832B0C009C002328B0 /* FoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3822B0C009C002328B0 /* FoldersView.swift */; };
+		D79FE3852B0C00BC002328B0 /* FolderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3842B0C00BC002328B0 /* FolderCellView.swift */; };
+		D79FE3872B0C0191002328B0 /* NewFolderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3862B0C0191002328B0 /* NewFolderButton.swift */; };
+		D79FE38A2B0C03E7002328B0 /* AlgorithmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3892B0C03E7002328B0 /* AlgorithmListView.swift */; };
+		D79FE38C2B0C03EC002328B0 /* AlgorithmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE38B2B0C03EC002328B0 /* AlgorithmsView.swift */; };
+		D79FE38E2B0C0410002328B0 /* NewAlgorithmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE38D2B0C0410002328B0 /* NewAlgorithmButton.swift */; };
+		D79FE3902B0C0421002328B0 /* EmptyFolderMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE38F2B0C0421002328B0 /* EmptyFolderMessageView.swift */; };
+		D79FE3922B0C0445002328B0 /* AlgorithmCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3912B0C0445002328B0 /* AlgorithmCellView.swift */; };
+		D79FE3952B0C2049002328B0 /* AlgorithmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3942B0C2049002328B0 /* AlgorithmView.swift */; };
+		D79FE3972B0C2052002328B0 /* AlgorithmInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3962B0C2052002328B0 /* AlgorithmInfoView.swift */; };
+		D79FE39A2B0C2156002328B0 /* TapeComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3992B0C2156002328B0 /* TapeComponentView.swift */; };
+		D79FE39C2B0C2377002328B0 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE39B2B0C2377002328B0 /* Color+Extension.swift */; };
+		D79FE39E2B0C242D002328B0 /* TapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE39D2B0C242D002328B0 /* TapeView.swift */; };
+		D79FE3A02B0C245F002328B0 /* ComponentsLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE39F2B0C245F002328B0 /* ComponentsLineView.swift */; };
+		D79FE3A22B0C2C6B002328B0 /* TapesWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3A12B0C2C6B002328B0 /* TapesWorkView.swift */; };
+		D79FE3A52B0CB6C7002328B0 /* StartStateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3A42B0CB6C7002328B0 /* StartStateListView.swift */; };
+		D79FE3A82B0CB7A6002328B0 /* SelectableViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3A72B0CB7A6002328B0 /* SelectableViewModifier.swift */; };
+		D79FE3AB2B0CB84F002328B0 /* OptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3AA2B0CB84F002328B0 /* OptionListView.swift */; };
+		D79FE3AD2B0CBB34002328B0 /* ConfigurationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3AC2B0CBB34002328B0 /* ConfigurationsView.swift */; };
+		D79FE3AF2B0CBEBF002328B0 /* PlayStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE3AE2B0CBEBF002328B0 /* PlayStackView.swift */; };
+		D7D08EAD2B0251B900EAA1DD /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D08EAC2B0251B900EAA1DD /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +69,6 @@
 /* Begin PBXFileReference section */
 		D743CD952AF039D60076CEE9 /* TuringMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuringMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D743CD982AF039D60076CEE9 /* TuringMachineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringMachineApp.swift; sourceTree = "<group>"; };
-		D743CD9A2AF039D60076CEE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D743CD9C2AF039D90076CEE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D743CD9F2AF039D90076CEE9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D743CDA12AF039D90076CEE9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +78,38 @@
 		D743CDB42AF039D90076CEE9 /* TuringMachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuringMachineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D743CDB82AF039D90076CEE9 /* TuringMachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringMachineUITests.swift; sourceTree = "<group>"; };
 		D743CDBA2AF039D90076CEE9 /* TuringMachineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringMachineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D79FE35F2B0BF591002328B0 /* MockDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataGenerator.swift; sourceTree = "<group>"; };
+		D79FE3612B0BFA3A002328B0 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		D79FE3632B0BFA3A002328B0 /* Combination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
+		D79FE3652B0BFA3A002328B0 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
+		D79FE3672B0BFA3A002328B0 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		D79FE3692B0BFA3A002328B0 /* StateQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateQ.swift; sourceTree = "<group>"; };
+		D79FE36B2B0BFA3A002328B0 /* Tape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tape.swift; sourceTree = "<group>"; };
+		D79FE3792B0BFC4B002328B0 /* CoreDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFetcher.swift; sourceTree = "<group>"; };
+		D79FE37C2B0BFCA7002328B0 /* FolderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderListView.swift; sourceTree = "<group>"; };
+		D79FE37E2B0BFE0E002328B0 /* Optional+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Date.swift"; sourceTree = "<group>"; };
+		D79FE3802B0BFF01002328B0 /* Optional+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+String.swift"; sourceTree = "<group>"; };
+		D79FE3822B0C009C002328B0 /* FoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersView.swift; sourceTree = "<group>"; };
+		D79FE3842B0C00BC002328B0 /* FolderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCellView.swift; sourceTree = "<group>"; };
+		D79FE3862B0C0191002328B0 /* NewFolderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderButton.swift; sourceTree = "<group>"; };
+		D79FE3892B0C03E7002328B0 /* AlgorithmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmListView.swift; sourceTree = "<group>"; };
+		D79FE38B2B0C03EC002328B0 /* AlgorithmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsView.swift; sourceTree = "<group>"; };
+		D79FE38D2B0C0410002328B0 /* NewAlgorithmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlgorithmButton.swift; sourceTree = "<group>"; };
+		D79FE38F2B0C0421002328B0 /* EmptyFolderMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFolderMessageView.swift; sourceTree = "<group>"; };
+		D79FE3912B0C0445002328B0 /* AlgorithmCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmCellView.swift; sourceTree = "<group>"; };
+		D79FE3942B0C2049002328B0 /* AlgorithmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmView.swift; sourceTree = "<group>"; };
+		D79FE3962B0C2052002328B0 /* AlgorithmInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmInfoView.swift; sourceTree = "<group>"; };
+		D79FE3992B0C2156002328B0 /* TapeComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapeComponentView.swift; sourceTree = "<group>"; };
+		D79FE39B2B0C2377002328B0 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		D79FE39D2B0C242D002328B0 /* TapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapeView.swift; sourceTree = "<group>"; };
+		D79FE39F2B0C245F002328B0 /* ComponentsLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsLineView.swift; sourceTree = "<group>"; };
+		D79FE3A12B0C2C6B002328B0 /* TapesWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapesWorkView.swift; sourceTree = "<group>"; };
+		D79FE3A42B0CB6C7002328B0 /* StartStateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartStateListView.swift; sourceTree = "<group>"; };
+		D79FE3A72B0CB7A6002328B0 /* SelectableViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableViewModifier.swift; sourceTree = "<group>"; };
+		D79FE3AA2B0CB84F002328B0 /* OptionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListView.swift; sourceTree = "<group>"; };
+		D79FE3AC2B0CBB34002328B0 /* ConfigurationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsView.swift; sourceTree = "<group>"; };
+		D79FE3AE2B0CBEBF002328B0 /* PlayStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStackView.swift; sourceTree = "<group>"; };
+		D7D08EAC2B0251B900EAA1DD /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				D743CD982AF039D60076CEE9 /* TuringMachineApp.swift */,
-				D743CD9A2AF039D60076CEE9 /* ContentView.swift */,
-				D743CD9C2AF039D90076CEE9 /* Assets.xcassets */,
-				D743CDA12AF039D90076CEE9 /* Persistence.swift */,
-				D743CDA32AF039D90076CEE9 /* TuringMachine.xcdatamodeld */,
+				D743CDC72AF03B8C0076CEE9 /* Base */,
+				D743CDCB2AF03BF20076CEE9 /* Modules */,
+				D743CDC82AF03B910076CEE9 /* Resources */,
 				D743CD9E2AF039D90076CEE9 /* Preview Content */,
 			);
 			path = TuringMachine;
@@ -131,6 +192,151 @@
 				D743CDBA2AF039D90076CEE9 /* TuringMachineUITestsLaunchTests.swift */,
 			);
 			path = TuringMachineUITests;
+			sourceTree = "<group>";
+		};
+		D743CDC72AF03B8C0076CEE9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE3A62B0CB7A0002328B0 /* ViewModifiers */,
+				D743CDA12AF039D90076CEE9 /* Persistence.swift */,
+				D79FE35E2B0BF581002328B0 /* Mocks */,
+				D7473A742B0BC8AB0050D6AD /* Models */,
+				D7D08EAB2B0251AF00EAA1DD /* Extensions */,
+				D743CDCA2AF03BCA0076CEE9 /* Models */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D743CDC82AF03B910076CEE9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D743CDA32AF039D90076CEE9 /* TuringMachine.xcdatamodeld */,
+				D743CD9C2AF039D90076CEE9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D743CDCA2AF03BCA0076CEE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D743CDCB2AF03BF20076CEE9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE37B2B0BFC99002328B0 /* Folders */,
+				D79FE3882B0C03C0002328B0 /* Folder */,
+				D79FE3932B0C2032002328B0 /* Algorithm */,
+				D79FE3982B0C213F002328B0 /* Tape */,
+				D79FE3A32B0CB6B8002328B0 /* States */,
+				D79FE3A92B0CB842002328B0 /* Options */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D7473A742B0BC8AB0050D6AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE3612B0BFA3A002328B0 /* Option.swift */,
+				D79FE3632B0BFA3A002328B0 /* Combination.swift */,
+				D79FE3652B0BFA3A002328B0 /* Algorithm.swift */,
+				D79FE3672B0BFA3A002328B0 /* Folder.swift */,
+				D79FE3692B0BFA3A002328B0 /* StateQ.swift */,
+				D79FE36B2B0BFA3A002328B0 /* Tape.swift */,
+			);
+			name = Models;
+			path = CoreData/Models;
+			sourceTree = "<group>";
+		};
+		D79FE35E2B0BF581002328B0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE35F2B0BF591002328B0 /* MockDataGenerator.swift */,
+				D79FE3792B0BFC4B002328B0 /* CoreDataFetcher.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D79FE37B2B0BFC99002328B0 /* Folders */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE37C2B0BFCA7002328B0 /* FolderListView.swift */,
+				D79FE3822B0C009C002328B0 /* FoldersView.swift */,
+				D79FE3842B0C00BC002328B0 /* FolderCellView.swift */,
+				D79FE3862B0C0191002328B0 /* NewFolderButton.swift */,
+			);
+			path = Folders;
+			sourceTree = "<group>";
+		};
+		D79FE3882B0C03C0002328B0 /* Folder */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE3892B0C03E7002328B0 /* AlgorithmListView.swift */,
+				D79FE38B2B0C03EC002328B0 /* AlgorithmsView.swift */,
+				D79FE3912B0C0445002328B0 /* AlgorithmCellView.swift */,
+				D79FE38D2B0C0410002328B0 /* NewAlgorithmButton.swift */,
+				D79FE38F2B0C0421002328B0 /* EmptyFolderMessageView.swift */,
+			);
+			path = Folder;
+			sourceTree = "<group>";
+		};
+		D79FE3932B0C2032002328B0 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE3942B0C2049002328B0 /* AlgorithmView.swift */,
+				D79FE3962B0C2052002328B0 /* AlgorithmInfoView.swift */,
+				D79FE3AC2B0CBB34002328B0 /* ConfigurationsView.swift */,
+				D79FE3AE2B0CBEBF002328B0 /* PlayStackView.swift */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		D79FE3982B0C213F002328B0 /* Tape */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE39D2B0C242D002328B0 /* TapeView.swift */,
+				D79FE39F2B0C245F002328B0 /* ComponentsLineView.swift */,
+				D79FE3992B0C2156002328B0 /* TapeComponentView.swift */,
+				D79FE3A12B0C2C6B002328B0 /* TapesWorkView.swift */,
+			);
+			path = Tape;
+			sourceTree = "<group>";
+		};
+		D79FE3A32B0CB6B8002328B0 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE3A42B0CB6C7002328B0 /* StartStateListView.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		D79FE3A62B0CB7A0002328B0 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE3A72B0CB7A6002328B0 /* SelectableViewModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		D79FE3A92B0CB842002328B0 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				D79FE3AA2B0CB84F002328B0 /* OptionListView.swift */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		D7D08EAB2B0251AF00EAA1DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7D08EAC2B0251B900EAA1DD /* View+Extension.swift */,
+				D79FE37E2B0BFE0E002328B0 /* Optional+Date.swift */,
+				D79FE3802B0BFF01002328B0 /* Optional+String.swift */,
+				D79FE39B2B0C2377002328B0 /* Color+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +469,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D79FE39A2B0C2156002328B0 /* TapeComponentView.swift in Sources */,
+				D79FE38C2B0C03EC002328B0 /* AlgorithmsView.swift in Sources */,
+				D79FE37D2B0BFCA7002328B0 /* FolderListView.swift in Sources */,
 				D743CDA52AF039D90076CEE9 /* TuringMachine.xcdatamodeld in Sources */,
+				D79FE3772B0BFA3A002328B0 /* Tape.swift in Sources */,
+				D79FE3752B0BFA3A002328B0 /* StateQ.swift in Sources */,
+				D79FE36F2B0BFA3A002328B0 /* Combination.swift in Sources */,
+				D7D08EAD2B0251B900EAA1DD /* View+Extension.swift in Sources */,
+				D79FE3AB2B0CB84F002328B0 /* OptionListView.swift in Sources */,
+				D79FE3922B0C0445002328B0 /* AlgorithmCellView.swift in Sources */,
+				D79FE3952B0C2049002328B0 /* AlgorithmView.swift in Sources */,
+				D79FE39E2B0C242D002328B0 /* TapeView.swift in Sources */,
+				D79FE3A02B0C245F002328B0 /* ComponentsLineView.swift in Sources */,
+				D79FE3832B0C009C002328B0 /* FoldersView.swift in Sources */,
+				D79FE38E2B0C0410002328B0 /* NewAlgorithmButton.swift in Sources */,
+				D79FE3712B0BFA3A002328B0 /* Algorithm.swift in Sources */,
+				D79FE3872B0C0191002328B0 /* NewFolderButton.swift in Sources */,
+				D79FE36D2B0BFA3A002328B0 /* Option.swift in Sources */,
+				D79FE3902B0C0421002328B0 /* EmptyFolderMessageView.swift in Sources */,
+				D79FE3732B0BFA3A002328B0 /* Folder.swift in Sources */,
+				D79FE37A2B0BFC4B002328B0 /* CoreDataFetcher.swift in Sources */,
+				D79FE3812B0BFF01002328B0 /* Optional+String.swift in Sources */,
+				D79FE3A82B0CB7A6002328B0 /* SelectableViewModifier.swift in Sources */,
+				D79FE3AF2B0CBEBF002328B0 /* PlayStackView.swift in Sources */,
+				D79FE39C2B0C2377002328B0 /* Color+Extension.swift in Sources */,
+				D79FE3602B0BF591002328B0 /* MockDataGenerator.swift in Sources */,
+				D79FE3AD2B0CBB34002328B0 /* ConfigurationsView.swift in Sources */,
+				D79FE37F2B0BFE0E002328B0 /* Optional+Date.swift in Sources */,
+				D79FE3972B0C2052002328B0 /* AlgorithmInfoView.swift in Sources */,
+				D79FE3A22B0C2C6B002328B0 /* TapesWorkView.swift in Sources */,
+				D79FE3852B0C00BC002328B0 /* FolderCellView.swift in Sources */,
 				D743CDA22AF039D90076CEE9 /* Persistence.swift in Sources */,
-				D743CD9B2AF039D60076CEE9 /* ContentView.swift in Sources */,
+				D79FE3A52B0CB6C7002328B0 /* StartStateListView.swift in Sources */,
+				D79FE38A2B0C03E7002328B0 /* AlgorithmListView.swift in Sources */,
 				D743CD992AF039D60076CEE9 /* TuringMachineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +675,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +705,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
