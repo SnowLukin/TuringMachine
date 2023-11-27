@@ -14,7 +14,9 @@ struct TuringMachineApp: App {
 
     var body: some Scene {
         WindowGroup {
-            EmptyView()
+            NavigationView {
+                FolderListView()
+            }
         }
         .environment(\.managedObjectContext, context)
     }

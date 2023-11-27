@@ -13,7 +13,7 @@ struct SelectableViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         HStack {
             content
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .alignHorizontally(.leading)
             if isSelected {
                 Image(systemName: "circle.fill")
                     .foregroundColor(.blue)
