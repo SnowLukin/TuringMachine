@@ -18,6 +18,12 @@
 		D794E9732B129D6F00A85B57 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E9722B129D6F00A85B57 /* Direction.swift */; };
 		D794E9792B12A13D00A85B57 /* FoldersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E9782B12A13D00A85B57 /* FoldersViewModel.swift */; };
 		D794E9902B141B8B00A85B57 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D794E98F2B141B8B00A85B57 /* .swiftlint.yml */; };
+		D794E9952B14E71F00A85B57 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E9942B14E71F00A85B57 /* Folder.swift */; };
+		D794E9972B14E72500A85B57 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E9962B14E72500A85B57 /* Algorithm.swift */; };
+		D794E9992B14E72900A85B57 /* Tape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E9982B14E72900A85B57 /* Tape.swift */; };
+		D794E99B2B14E72F00A85B57 /* MachineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E99A2B14E72F00A85B57 /* MachineState.swift */; };
+		D794E99D2B14E73200A85B57 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E99C2B14E73200A85B57 /* Option.swift */; };
+		D794E99F2B14E73700A85B57 /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D794E99E2B14E73700A85B57 /* Combination.swift */; };
 		D79FE3602B0BF591002328B0 /* MockDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE35F2B0BF591002328B0 /* MockDataGenerator.swift */; };
 		D79FE37D2B0BFCA7002328B0 /* FolderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE37C2B0BFCA7002328B0 /* FolderListView.swift */; };
 		D79FE37F2B0BFE0E002328B0 /* Optional+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FE37E2B0BFE0E002328B0 /* Optional+Date.swift */; };
@@ -96,6 +102,12 @@
 		D794E9722B129D6F00A85B57 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		D794E9782B12A13D00A85B57 /* FoldersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersViewModel.swift; sourceTree = "<group>"; };
 		D794E98F2B141B8B00A85B57 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		D794E9942B14E71F00A85B57 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		D794E9962B14E72500A85B57 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
+		D794E9982B14E72900A85B57 /* Tape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tape.swift; sourceTree = "<group>"; };
+		D794E99A2B14E72F00A85B57 /* MachineState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineState.swift; sourceTree = "<group>"; };
+		D794E99C2B14E73200A85B57 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		D794E99E2B14E73700A85B57 /* Combination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
 		D79FE35F2B0BF591002328B0 /* MockDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataGenerator.swift; sourceTree = "<group>"; };
 		D79FE37C2B0BFCA7002328B0 /* FolderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderListView.swift; sourceTree = "<group>"; };
 		D79FE37E2B0BFE0E002328B0 /* Optional+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Date.swift"; sourceTree = "<group>"; };
@@ -266,6 +278,12 @@
 				D743CDA12AF039D90076CEE9 /* Persistence.swift */,
 				D79FE3C72B0F4DCB002328B0 /* ModelProtocol.swift */,
 				D794E9762B12A08700A85B57 /* CoreDataEntities */,
+				D794E9942B14E71F00A85B57 /* Folder.swift */,
+				D794E9962B14E72500A85B57 /* Algorithm.swift */,
+				D794E9982B14E72900A85B57 /* Tape.swift */,
+				D794E99A2B14E72F00A85B57 /* MachineState.swift */,
+				D794E99C2B14E73200A85B57 /* Option.swift */,
+				D794E99E2B14E73700A85B57 /* Combination.swift */,
 			);
 			name = Models;
 			path = CoreData/Models;
@@ -614,9 +632,12 @@
 				D79FE3B52B0E44CE002328B0 /* TapeConfigurationListView.swift in Sources */,
 				D79FE3C62B0F4DB2002328B0 /* CDOption+Extension.swift in Sources */,
 				D79FE37D2B0BFCA7002328B0 /* FolderListView.swift in Sources */,
+				D794E9972B14E72500A85B57 /* Algorithm.swift in Sources */,
 				D743CDA52AF039D90076CEE9 /* TuringMachine.xcdatamodeld in Sources */,
 				D79FE3B72B0E47A8002328B0 /* StateListView.swift in Sources */,
+				D794E9992B14E72900A85B57 /* Tape.swift in Sources */,
 				D7D08EAD2B0251B900EAA1DD /* View+Extension.swift in Sources */,
+				D794E99F2B14E73700A85B57 /* Combination.swift in Sources */,
 				D79FE3AB2B0CB84F002328B0 /* StateView.swift in Sources */,
 				D794E9792B12A13D00A85B57 /* FoldersViewModel.swift in Sources */,
 				D79FE3CC2B0F5150002328B0 /* CDCombination+Extension.swift in Sources */,
@@ -641,6 +662,7 @@
 				D79FE3902B0C0421002328B0 /* EmptyFolderMessageView.swift in Sources */,
 				D79FE3B12B0D2FF2002328B0 /* CirclyModifier.swift in Sources */,
 				D79FE3B32B0E431C002328B0 /* TapeConfigurationView.swift in Sources */,
+				D794E9952B14E71F00A85B57 /* Folder.swift in Sources */,
 				D79FE3D12B0FB4DB002328B0 /* OptionDestinationStateButton.swift in Sources */,
 				D79FE3812B0BFF01002328B0 /* Optional+String.swift in Sources */,
 				D79FE3A82B0CB7A6002328B0 /* SelectableViewModifier.swift in Sources */,
@@ -651,6 +673,7 @@
 				D79FE37F2B0BFE0E002328B0 /* Optional+Date.swift in Sources */,
 				D79FE3DA2B1116B0002328B0 /* PlayingLogic.swift in Sources */,
 				D79FE3BC2B0E79B2002328B0 /* CombinationConfigurationView.swift in Sources */,
+				D794E99B2B14E72F00A85B57 /* MachineState.swift in Sources */,
 				D79FE3A22B0C2C6B002328B0 /* TapesWorkView.swift in Sources */,
 				D79FE3852B0C00BC002328B0 /* FolderCellView.swift in Sources */,
 				D743CDA22AF039D90076CEE9 /* Persistence.swift in Sources */,
@@ -658,6 +681,7 @@
 				D79FE38A2B0C03E7002328B0 /* FolderView.swift in Sources */,
 				D79FE3BA2B0E735D002328B0 /* OptionView.swift in Sources */,
 				D79FE3E02B120FA7002328B0 /* AlgorithmInfoView.swift in Sources */,
+				D794E99D2B14E73200A85B57 /* Option.swift in Sources */,
 				D743CD992AF039D60076CEE9 /* TuringMachineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

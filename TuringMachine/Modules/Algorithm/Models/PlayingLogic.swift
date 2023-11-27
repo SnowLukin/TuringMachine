@@ -13,6 +13,7 @@ final class PlayingLogic: ObservableObject {
 
     @Published var algorithm: CDAlgorithm
     let context: NSManagedObjectContext
+    
     private var autoStepTask: Task<Void, Never>?
 
     init(algorithm: CDAlgorithm) {
@@ -58,6 +59,7 @@ final class PlayingLogic: ObservableObject {
             let states = algorithm.unwrappedStates
             let activeStateId = algorithm.activeStateId
             guard let state = states.first(where: { $0.id == activeStateId }) else {
+                // TODO: Show toast notifying the user to set active state
                 assertionFailure("Couldnt find active state.")
                 return
             }
@@ -72,12 +74,14 @@ final class PlayingLogic: ObservableObject {
             // Performing the step changing tape components
             for index in currentOptionCombination.indices {
                 guard let currentTape = algorithm.unwrappedTapes.at(index) else {
+                    // TODO: Show toast with error
                     assertionFailure("Couldnt find tape for fromChar.")
                     return
                 }
 
                 // Finding correct combination for current tape
                 guard let combination = chosenOption.unwrappedCombinations.at(index) else {
+                    // TODO: Show toast with error
                     assertionFailure("Couldnt find combination for tape.")
                     continue
                 }
@@ -87,7 +91,7 @@ final class PlayingLogic: ObservableObject {
                 let workingInputArray = currentTape.workingInput.unwrapped
                     .map { String($0) }
                 if headIndex < 0 || headIndex > workingInputArray.count {
-                    assertionFailure("Working Head Index bigger than workingInput.")
+                    // Working Head Index bigger than workingInput
                     continue
                 }
 
