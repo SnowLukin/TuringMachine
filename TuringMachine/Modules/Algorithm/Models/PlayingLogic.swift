@@ -16,9 +16,12 @@ final class PlayingLogic: ObservableObject {
 
     private var autoStepTask: Task<Void, Never>?
 
-    init(algorithm: CDAlgorithm) {
+    init(
+        algorithm: CDAlgorithm,
+        context: NSManagedObjectContext = PersistenceController.shared.context
+    ) {
         self.algorithm = algorithm
-        self.context = PersistenceController.shared.context
+        self.context = context
     }
 
     func reset() {

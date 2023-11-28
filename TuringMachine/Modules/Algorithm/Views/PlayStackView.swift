@@ -16,9 +16,12 @@ struct PlayStackView: View {
     @State private var isPlaying = false
     @State private var isPlayOptionOn = false
 
-    init(algorithm: CDAlgorithm) {
+    init(
+        algorithm: CDAlgorithm,
+        context: NSManagedObjectContext = PersistenceController.shared.context
+    ) {
         self.algorithm = algorithm
-        self.vm = .init(algorithm: algorithm)
+        self.vm = .init(algorithm: algorithm, context: context)
     }
 
     var body: some View {
@@ -42,7 +45,7 @@ struct PlayStackView: View {
 #Preview {
     let context = PersistenceController.preview.context
     let algorithm = CDAlgorithm.findAll(in: context)[0]
-    return PlayStackView(algorithm: algorithm)
+    return PlayStackView(algorithm: algorithm, context: context)
 }
 
 extension PlayStackView {
