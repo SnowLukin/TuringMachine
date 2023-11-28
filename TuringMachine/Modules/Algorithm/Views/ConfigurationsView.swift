@@ -25,7 +25,7 @@ struct ConfigurationsView: View {
                 )
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
-                    .padding(.vertical, 5)
+                    .padding(.vertical, 10)
                     .alignHorizontally(.center)
                     .background(.blue.gradient, in: .capsule)
             }
