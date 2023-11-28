@@ -13,7 +13,7 @@ final class PlayingLogic: ObservableObject {
 
     @Published var algorithm: CDAlgorithm
     let context: NSManagedObjectContext
-    
+
     private var autoStepTask: Task<Void, Never>?
 
     init(algorithm: CDAlgorithm) {

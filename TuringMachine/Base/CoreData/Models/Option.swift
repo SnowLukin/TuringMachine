@@ -20,7 +20,7 @@ extension Option {
         self.combinations = cdEntity.unwrappedCombinations.map { Combination(from: $0) }
         self.toStateId = cdEntity.toStateId.unwrapped
         if let cdState = cdEntity.state {
-            self.state = Algorithm(from: cdState)
+            self.state = MachineState(from: cdState)
         }
     }
 }
