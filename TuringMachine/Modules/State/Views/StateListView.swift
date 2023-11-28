@@ -51,7 +51,7 @@ struct StateListView: View {
 
     func addState(with name: String) {
         withAnimation {
-            try? CDMachineState.create(name: name, algorithm: algorithm, in: context)
+            _ = try? CDMachineState.create(name: name, algorithm: algorithm, in: context)
         }
     }
 

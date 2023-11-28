@@ -28,20 +28,34 @@ extension CDFolder {
 }
 
 extension CDFolder: ModelProtocol {
+    @discardableResult
     static func create(
         id: String = UUID().uuidString,
         name: String,
         algorithms: [CDAlgorithm] = [],
         in context: NSManagedObjectContext
-    ) throws {
+    ) throws -> CDFolder {
         let folder = CDFolder(context: context)
         folder.id = id
         folder.name = name
         try folder.save(in: context)
+        return folder
     }
 
     func removeAlgorithm(_ algorithm: CDAlgorithm, in context: NSManagedObjectContext) throws {
         self.removeFromAlgorithms(algorithm)
         try self.save(in: context)
+    }
+}
+
+extension CDFolder {
+    @discardableResult
+    static func create(from folderData: Folder, in context: NSManagedObjectContext) throws -> CDFolder {
+        let folder = try CDFolder.create(name: folderData.name, in: context)
+        folderData.algorithms.forEach { algorithm in
+            _ = try? CDAlgorithm.create(from: algorithm, folder: folder, in: context)
+        }
+        try folder.save(in: context)
+        return folder
     }
 }

@@ -35,7 +35,7 @@ struct TapeConfigurationListView: View {
 
     func createTape(with name: String) {
         withAnimation {
-            try? CDTape.create(name: name, algorithm: algorithm, in: context)
+            _ = try? CDTape.create(name: name, algorithm: algorithm, in: context)
         }
     }
 }
@@ -43,7 +43,7 @@ struct TapeConfigurationListView: View {
 #Preview {
     let context = PersistenceController.preview.context
     let algorithm = CDAlgorithm.findAll(in: context)[0]
-    return NavigationView {
+    return NavigationStack {
         TapeConfigurationListView(algorithm: algorithm)
     }.environment(\.managedObjectContext, context)
 }

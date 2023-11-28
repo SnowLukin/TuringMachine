@@ -68,7 +68,7 @@ struct FolderView: View {
 #Preview {
     let context = PersistenceController.preview.container.viewContext
     let folder = CDFolder.findAll(in: context)[0]
-    return NavigationView {
+    return NavigationStack {
         FolderView(folder: folder)
     }
 }

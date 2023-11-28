@@ -23,7 +23,7 @@ struct AlgorithmInfoView: View {
     @State private var descriptionInput = ""
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 VStack {
                     Text("Name")

@@ -22,6 +22,7 @@ extension CDTape: ModelProtocol {
         return CDTape.findAll(withPredicate: predicate, in: context)
     }
 
+    @discardableResult
     static func create(
         id: String = UUID().uuidString,
         name: String,
@@ -29,7 +30,7 @@ extension CDTape: ModelProtocol {
         headIndex: Int = 100,
         algorithm: CDAlgorithm,
         in context: NSManagedObjectContext
-    ) throws {
+    ) throws -> CDTape {
         let tape = CDTape(context: context)
         tape.id = id
         tape.name = name
@@ -40,6 +41,7 @@ extension CDTape: ModelProtocol {
         tape.workingHeadIndex = tape.headIndex
         algorithm.addToTapes(tape)
         try tape.save(in: context)
+        return tape
     }
 
     func changeHeadIndex(to index: Int) throws {
@@ -61,5 +63,22 @@ extension CDTape: ModelProtocol {
         self.workingHeadIndex = self.headIndex
 
         try self.save(in: context)
+    }
+}
+
+extension CDTape {
+    @discardableResult
+    static func create(from tapeData: Tape,
+                       algorithm: CDAlgorithm,
+                       in context: NSManagedObjectContext) throws -> CDTape {
+        let tape = try CDTape.create(
+            id: tapeData.id,
+            name: tapeData.name,
+            input: tapeData.input,
+            headIndex: tapeData.headIndex,
+            algorithm: algorithm,
+            in: context
+        )
+        return tape
     }
 }

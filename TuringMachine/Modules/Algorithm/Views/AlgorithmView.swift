@@ -95,12 +95,7 @@ extension AlgorithmView {
             .frame(height: algorithm.isChanged ? 30 : 0)
             .background(
                 .red,
-                in: .rect(
-                    cornerRadii: .init(
-                        topLeading: 8,
-                        bottomLeading: 10
-                    )
-                )
+                in: .rect(topLeadingRadius: 8, bottomLeadingRadius: 8)
             )
             .alignHorizontally(.trailing)
             .offset(x: algorithm.isChanged ? 0 : 300)

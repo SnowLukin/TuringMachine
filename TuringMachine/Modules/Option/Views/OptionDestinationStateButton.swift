@@ -40,7 +40,7 @@ struct OptionDestinationStateButton: View {
 #Preview {
     let context = PersistenceController.preview.container.viewContext
     let option = CDOption.findAll(in: context)[0]
-    return NavigationView {
+    return NavigationStack {
         OptionDestinationStateButton(option: option)
             .environment(\.managedObjectContext, context)
     }

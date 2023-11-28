@@ -48,22 +48,30 @@ extension CDAlgorithm: ModelProtocol {
         return CDAlgorithm.findAll(withPredicate: predicate, in: context)
     }
 
+    @discardableResult
     static func create(
         id: String = UUID().uuidString,
         name: String,
+        description: String? = nil,
         createdDate: Date = .now,
         lastEditDate: Date = .now,
+        startingStateId: String? = nil,
+        activeStateId: String? = nil,
         folder: CDFolder,
         in context: NSManagedObjectContext
-    ) throws {
+    ) throws -> CDAlgorithm {
         let name = name.trimmingCharacters(in: .whitespaces)
         let algorithm = CDAlgorithm(context: context)
         algorithm.id = id
         algorithm.name = name
+        algorithm.algDescription = description
         algorithm.createdDate = createdDate
         algorithm.lastEditDate = lastEditDate
+        algorithm.startingStateId = startingStateId
+        algorithm.activeStateId = activeStateId
         folder.addToAlgorithms(algorithm)
         try algorithm.save(in: context)
+        return algorithm
     }
 
     func removeTape(_ tape: CDTape) throws {
@@ -93,5 +101,32 @@ extension CDAlgorithm: ModelProtocol {
         self.startingStateId = state.id
         self.activeStateId = state.id
         try self.save(in: context)
+    }
+}
+
+extension CDAlgorithm {
+    @discardableResult
+    static func create(from algorithmData: Algorithm,
+                       folder: CDFolder,
+                       in context: NSManagedObjectContext) throws -> CDAlgorithm {
+        let algorithm = try CDAlgorithm.create(
+            name: algorithmData.name,
+            description: algorithmData.algDescription,
+            startingStateId: algorithmData.startingStateId,
+            activeStateId: algorithmData.activeStateId,
+            folder: folder,
+            in: context
+        )
+
+        algorithmData.tapes.forEach { tape in
+            _ = try? CDTape.create(from: tape, algorithm: algorithm, in: context)
+        }
+
+        algorithmData.states.forEach { state in
+            _ = try? CDMachineState.create(from: state, algorithm: algorithm, in: context)
+        }
+
+        try algorithm.save(in: context)
+        return algorithm
     }
 }

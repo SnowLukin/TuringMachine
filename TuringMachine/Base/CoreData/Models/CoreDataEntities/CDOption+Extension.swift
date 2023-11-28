@@ -49,29 +49,53 @@ extension CDOption: ModelProtocol {
         return CDOption.findAll(withPredicate: predicate, in: context)
     }
 
+    @discardableResult
     static func create(
         id: String = UUID().uuidString,
-        combinations: String,
+        combinations: String = "",
+        toStateId: String? = nil,
         state: CDMachineState,
         in context: NSManagedObjectContext
-    ) throws {
+    ) throws -> CDOption {
         let option = CDOption(context: context)
         option.id = id
-        option.toStateId = state.id
+        option.toStateId = (toStateId ?? state.id)
 
         combinations.forEach { char in
             let char = String(char)
-            try? CDCombination.create(fromChar: char, toChar: char, option: option, in: context)
+            _ = try? CDCombination.create(fromChar: char, toChar: char, option: option, in: context)
         }
 
         state.addToOptions(option)
         state.algorithm?.lastEditDate = .now
         try option.save(in: context)
+        return option
     }
 
     func removeCombination(_ combination: CDCombination) throws {
         guard let context = self.managedObjectContext else { return }
         self.removeFromCombinations(combination)
         try combination.delete(from: context)
+    }
+}
+
+extension CDOption {
+    @discardableResult
+    static func create(from optionData: Option,
+                       state: CDMachineState,
+                       in context: NSManagedObjectContext) throws -> CDOption {
+        let option = try CDOption.create(
+            id: optionData.id,
+            toStateId: optionData.toStateId,
+            state: state,
+            in: context
+        )
+
+        optionData.combinations.forEach { combinationData in
+            _ = try? CDCombination.create(from: combinationData, option: option, in: context)
+        }
+
+        try option.save(in: context)
+        return option
     }
 }

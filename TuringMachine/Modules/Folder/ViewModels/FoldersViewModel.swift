@@ -21,7 +21,7 @@ final class FoldersViewModel: ObservableObject {
 
     func saveFolder(with name: String, in context: NSManagedObjectContext) {
         withFolderNameValidation(name, in: context) {
-            try? CDFolder.create(name: name, in: context)
+            _ = try? CDFolder.create(name: name, in: context)
         }
     }
 

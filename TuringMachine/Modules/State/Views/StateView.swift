@@ -43,7 +43,7 @@ struct StateView: View {
         }
         .alert("New Combination", isPresented: $showNewOptionAlert) {
             TextFieldAlert(placeholder: "") { text in
-                try? CDOption.create(combinations: text, state: state, in: context)
+                _ = try? CDOption.create(combinations: text, state: state, in: context)
             }
         } message: {
             Text("Enter new combination")
@@ -61,7 +61,7 @@ struct StateView: View {
 #Preview {
     let context = PersistenceController.preview.context
     let state = CDMachineState.findAll(in: context)[0]
-    return NavigationView {
+    return NavigationStack {
         StateView(state: state)
     }.environment(\.managedObjectContext, context)
 }

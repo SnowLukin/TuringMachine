@@ -30,7 +30,7 @@ struct NewAlgorithmButton: View {
     }
 
     func createAlgorithm(with name: String) {
-        try? CDAlgorithm.create(name: name, folder: folder, in: context)
+        _ = try? CDAlgorithm.create(name: name, folder: folder, in: context)
     }
 }
 

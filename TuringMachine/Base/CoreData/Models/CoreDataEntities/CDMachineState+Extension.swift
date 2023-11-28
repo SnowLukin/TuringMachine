@@ -29,23 +29,46 @@ extension CDMachineState: ModelProtocol {
         return CDMachineState.findAll(withPredicate: predicate, in: context)
     }
 
+    @discardableResult
     static func create(
         id: String = UUID().uuidString,
         name: String,
         options: [CDOption] = [],
         algorithm: CDAlgorithm,
         in context: NSManagedObjectContext
-    ) throws {
+    ) throws -> CDMachineState {
         let state = CDMachineState(context: context)
         state.id = UUID().uuidString
         state.name = name.isEmpty ? "State \(algorithm.unwrappedStates.count)" : name
         algorithm.addToStates(state)
         try state.save(in: context)
+        return state
     }
 
     func removeOption(_ option: CDOption) throws {
         guard let context = self.managedObjectContext else { return }
         self.removeFromOptions(option)
         try option.delete(from: context)
+    }
+}
+
+extension CDMachineState {
+    @discardableResult
+    static func create(from stateData: MachineState,
+                       algorithm: CDAlgorithm,
+                       in context: NSManagedObjectContext) throws -> CDMachineState {
+        let state = try CDMachineState.create(
+            id: stateData.id,
+            name: stateData.name,
+            algorithm: algorithm,
+            in: context
+        )
+
+        stateData.options.forEach { option in
+            _ = try? CDOption.create(from: option, state: state, in: context)
+        }
+
+        try state.save(in: context)
+        return state
     }
 }

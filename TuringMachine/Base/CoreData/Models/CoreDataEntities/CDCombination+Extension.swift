@@ -22,6 +22,7 @@ extension CDCombination: ModelProtocol {
         return CDCombination.findAll(withPredicate: predicate, in: context)
     }
 
+    @discardableResult
     static func create(
         id: String = UUID().uuidString,
         fromChar: String,
@@ -29,7 +30,7 @@ extension CDCombination: ModelProtocol {
         direction: Int = 0,
         option: CDOption,
         in context: NSManagedObjectContext
-    ) throws {
+    ) throws -> CDCombination {
         let combination = CDCombination(context: context)
         combination.id = id
         combination.fromChar = fromChar
@@ -37,6 +38,7 @@ extension CDCombination: ModelProtocol {
         combination.directionIndex = Int64(direction)
         option.addToCombinations(combination)
         try combination.save(in: context)
+        return combination
     }
 
     func update(toChar: String? = nil, fromChar: String? = nil, direction: Direction? = nil) throws {
@@ -51,5 +53,22 @@ extension CDCombination: ModelProtocol {
             self.directionIndex = Int64(direction.rawValue)
         }
         try self.save(in: context)
+    }
+}
+
+extension CDCombination {
+    @discardableResult
+    static func create(from combinationData: Combination,
+                       option: CDOption,
+                       in context: NSManagedObjectContext) throws -> CDCombination {
+        let combination = try CDCombination.create(
+            id: combinationData.id,
+            fromChar: combinationData.fromChar,
+            toChar: combinationData.toChar,
+            direction: combinationData.directionIndex,
+            option: option,
+            in: context
+        )
+        return combination
     }
 }
