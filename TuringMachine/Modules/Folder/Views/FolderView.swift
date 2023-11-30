@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct FolderView: View {
     @Environment(\.managedObjectContext) private var context
     @ObservedObject var folder: CDFolder
 
     @State private var showImport = false
+    @State private var showError = false
     @State private var searchedAlgorithm = ""
 
     var algorithms: [CDAlgorithm] {
@@ -38,6 +40,11 @@ struct FolderView: View {
             }
             .searchable(text: $searchedAlgorithm)
         }
+        .alert("Error occupied", isPresented: $showError) {
+            Button("OK") {}
+        } message: {
+            Text("Failed importing algorithm to an app.")
+        }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
@@ -54,6 +61,20 @@ struct FolderView: View {
             NewAlgorithmButton(folder: folder)
         }
         .navigationTitle(folder.name.unwrapped)
+        .fileImporter(
+            isPresented: $showImport,
+            allowedContentTypes: [.mtms],
+            allowsMultipleSelection: false
+        ) { result in
+            withAnimation {
+                do {
+                    let helper = AlgorithmImportHelper()
+                    try helper.handleImport(result, folder: folder, context: context)
+                } catch {
+                    showError.toggle()
+                }
+            }
+        }
     }
 
     func deleteAlgorithm(offsets: IndexSet) {

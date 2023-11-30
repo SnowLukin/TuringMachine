@@ -48,9 +48,6 @@ struct AlgorithmView: View {
                 toolbarButtons
             }
         }
-        .fullScreenCover(isPresented: $showInfo) {
-            AlgorithmInfoView(algorithm: algorithm)
-        }
         .onChange(of: algorithm.isChanged) { _ in
             // Close the setting if user started algorithm and setting are opened
             if algorithm.isChanged && showSettings {
@@ -59,6 +56,21 @@ struct AlgorithmView: View {
                 }
             }
         }
+        .fullScreenCover(isPresented: $showInfo) {
+            AlgorithmInfoView(algorithm: algorithm)
+        }
+//        .fileExporter(
+//            isPresented: $showExport,
+//            document: FileDocumentManager(algorithm: .init(from: algorithm)),
+//            contentType: .mtms
+//        ) { result in
+//            switch result {
+//            case .success:
+//                print("File successfully exported")
+//            case .failure:
+//                print("Error. Failed exporting the file.")
+//            }
+//        }
     }
 }
 

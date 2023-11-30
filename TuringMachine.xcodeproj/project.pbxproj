@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D73BDA4A2B161B87006950A6 /* FileDocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73BDA492B161B87006950A6 /* FileDocumentManager.swift */; };
+		D73BDA4E2B161FA3006950A6 /* AlgorithmImportHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73BDA4D2B161FA3006950A6 /* AlgorithmImportHelper.swift */; };
 		D743CD992AF039D60076CEE9 /* TuringMachineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D743CD982AF039D60076CEE9 /* TuringMachineApp.swift */; };
 		D743CD9D2AF039D90076CEE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D743CD9C2AF039D90076CEE9 /* Assets.xcassets */; };
 		D743CDA02AF039D90076CEE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D743CD9F2AF039D90076CEE9 /* Preview Assets.xcassets */; };
@@ -88,6 +90,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D73BDA482B161AB3006950A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D73BDA492B161B87006950A6 /* FileDocumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDocumentManager.swift; sourceTree = "<group>"; };
+		D73BDA4D2B161FA3006950A6 /* AlgorithmImportHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmImportHelper.swift; sourceTree = "<group>"; };
 		D743CD952AF039D60076CEE9 /* TuringMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuringMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D743CD982AF039D60076CEE9 /* TuringMachineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringMachineApp.swift; sourceTree = "<group>"; };
 		D743CD9C2AF039D90076CEE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,6 +184,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D73BDA4C2B161F95006950A6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D73BDA4D2B161FA3006950A6 /* AlgorithmImportHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D743CD8C2AF039D60076CEE9 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +215,7 @@
 		D743CD972AF039D60076CEE9 /* TuringMachine */ = {
 			isa = PBXGroup;
 			children = (
+				D73BDA482B161AB3006950A6 /* Info.plist */,
 				D743CD982AF039D60076CEE9 /* TuringMachineApp.swift */,
 				D743CDC72AF03B8C0076CEE9 /* Base */,
 				D743CDCB2AF03BF20076CEE9 /* Modules */,
@@ -241,6 +255,7 @@
 		D743CDC72AF03B8C0076CEE9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D73BDA4C2B161F95006950A6 /* Utils */,
 				D79FE3CD2B0F92F6002328B0 /* Views */,
 				D79FE3A62B0CB7A0002328B0 /* ViewModifiers */,
 				D7473A742B0BC8AB0050D6AD /* Models */,
@@ -284,6 +299,7 @@
 				D794E99A2B14E72F00A85B57 /* MachineState.swift */,
 				D794E99C2B14E73200A85B57 /* Option.swift */,
 				D794E99E2B14E73700A85B57 /* Combination.swift */,
+				D73BDA492B161B87006950A6 /* FileDocumentManager.swift */,
 			);
 			name = Models;
 			path = CoreData/Models;
@@ -654,6 +670,7 @@
 				D79FE3D72B10AF36002328B0 /* ListNavigationButtonView.swift in Sources */,
 				D79FE3D52B0FBC43002328B0 /* GenericStateList.swift in Sources */,
 				D79FE38E2B0C0410002328B0 /* NewAlgorithmButton.swift in Sources */,
+				D73BDA4E2B161FA3006950A6 /* AlgorithmImportHelper.swift in Sources */,
 				D79FE3872B0C0191002328B0 /* NewFolderButton.swift in Sources */,
 				D79FE3DE2B1116F0002328B0 /* Array+Extension.swift in Sources */,
 				D794E9732B129D6F00A85B57 /* Direction.swift in Sources */,
@@ -676,6 +693,7 @@
 				D794E99B2B14E72F00A85B57 /* MachineState.swift in Sources */,
 				D79FE3A22B0C2C6B002328B0 /* TapesWorkView.swift in Sources */,
 				D79FE3852B0C00BC002328B0 /* FolderCellView.swift in Sources */,
+				D73BDA4A2B161B87006950A6 /* FileDocumentManager.swift in Sources */,
 				D743CDA22AF039D90076CEE9 /* Persistence.swift in Sources */,
 				D79FE3A52B0CB6C7002328B0 /* StartStateListView.swift in Sources */,
 				D79FE38A2B0C03E7002328B0 /* FolderView.swift in Sources */,
@@ -850,6 +868,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TuringMachine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -881,6 +900,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TuringMachine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
