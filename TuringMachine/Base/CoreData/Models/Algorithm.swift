@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Algorithm: Codable {
+struct Algorithm: Identifiable, Codable {
+    let id: String
     let name: String
     let algDescription: String
     let createdDate: Date
@@ -21,6 +22,7 @@ struct Algorithm: Codable {
 
 extension Algorithm {
     init(from cdEntity: CDAlgorithm) {
+        self.id = cdEntity.id.unwrapped
         self.name = cdEntity.name.unwrapped
         self.algDescription = cdEntity.algDescription.unwrapped
         self.createdDate = cdEntity.createdDate.unwrappedOrNow

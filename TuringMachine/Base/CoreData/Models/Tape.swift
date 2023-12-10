@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Tape: Codable {
+struct Tape: Identifiable, Codable {
     let id: String
     let name: String
     let input: String

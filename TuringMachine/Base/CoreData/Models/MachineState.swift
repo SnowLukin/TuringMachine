@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MachineState: Codable {
+struct MachineState: Identifiable, Codable {
     let id: String
     let name: String
     let options: [Option]

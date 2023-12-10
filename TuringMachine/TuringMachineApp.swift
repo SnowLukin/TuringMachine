@@ -10,7 +10,7 @@ import SwiftData
 
 @main
 struct TuringMachineApp: App {
-    let context = PersistenceController.shared.container.viewContext
+    let context = PersistenceController.preview.context
 
     var body: some Scene {
         WindowGroup {

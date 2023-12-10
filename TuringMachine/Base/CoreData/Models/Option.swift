@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Option: Codable {
+struct Option: Identifiable, Codable {
     let id: String
     let combinations: [Combination]
     let toStateId: String

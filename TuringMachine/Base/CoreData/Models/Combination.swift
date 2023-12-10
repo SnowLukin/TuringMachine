@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Combination: Codable {
+struct Combination: Identifiable, Codable {
     let id: String
     let fromChar: String
     let toChar: String
